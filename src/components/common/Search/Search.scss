@@ -1,0 +1,29 @@
+.search{
+    border: 1px solid var(--border-color);
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+    border-radius: 4px;
+    gap: 0 4px;
+    height: 32px;
+    background: #FCFCFD;
+
+
+    
+    
+    input{
+      color: #2E3238;
+        &::placeholder{
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-light);
+        }
+    }
+    svg{
+        color: var(--text-light);
+        stroke-width: 1px;
+        flex-shrink: 0;
+    }
+    
+}

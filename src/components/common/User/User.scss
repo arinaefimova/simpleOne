@@ -1,0 +1,21 @@
+.user {
+	display: flex;
+    align-items: center;
+    gap: 0 8px;
+	img {
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+        object-fit: cover;
+        @media (max-width:768px){
+             height: 24px;
+             width: 24px; 
+        }
+	}
+
+	figcaption {
+        @media (max-width:768px){
+             display: none; 
+        }
+	}
+}

@@ -1,0 +1,157 @@
+.input-field {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px 0;
+    &_btm{
+        margin-bottom: 150px;
+    }
+	label {
+		font-weight: 600;
+		height: 26px;
+		display: flex;
+		gap: 0 4px;
+		align-items: flex-end;
+	}
+	sup {
+		align-self: start;
+		color: #b21f00;
+	}
+	&__wrapper {
+		display: flex;
+
+		align-items: center;
+		gap: 0 4px;
+		width: 100%;
+
+		span {
+			font-size: 20px;
+			padding: 6px;
+			border-radius: 4px;
+			width: 32px;
+			height: 32px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+            background: var(--bg-color);
+			border: 1px solid var(--border-color);
+			svg {
+				color: var(--main-color);
+			}
+		}
+	}
+	&__input {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		background: #fcfcfd;
+		justify-content: space-between;
+		border: 1px solid var(--border-color);
+		padding: 3px 4px;
+        min-height: 32px;
+		gap: 0 8px;
+        color: #2E3238;
+		border-radius: 4px;
+		input {
+			width: 100%;
+			flex: 1 1 auto;
+		}
+		svg {
+			color: var(--text-light);
+            
+		}
+	}
+	&__inner {
+		position: relative;
+		width: 100%;
+	}
+}
+
+.input-field__input input[type="date"]::-webkit-calendar-picker-indicator {
+	display: none;
+}
+.field {
+	height: 32px;
+}
+
+//========================================================================================================================================================
+
+.input-field__options {
+	position: absolute;
+	background: #fcfcfd;
+    color: #2E3238;
+	border: 1px solid var(--border-color);
+	border-radius: 4px;
+	top: 10px;
+	z-index: 2;
+	width: 100%;
+	max-height: 150px;
+	overflow-y: auto;
+    @media (max-width:768px){
+         z-index: 1; 
+    }
+	&::-webkit-scrollbar {
+		width: 7px;
+		background-color: #f9f9fd;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--border-color);
+	}
+
+	.input-field__option {
+		padding: 6px;
+
+		cursor: pointer;
+
+		&:hover {
+			background-color: #f0f0f0;
+		}
+	}
+}
+
+.input-field__tag {
+	display: flex;
+
+	white-space: nowrap;
+	align-items: center;
+    justify-content: space-between;
+	border: 1px solid #99d5ff;
+	background-color: #e5f4ff;
+	border-radius: 4px;
+    gap: 0 4px;
+	padding: 2px 16px 2px 8px;
+	font-size: 12px;
+    width: fit-content;
+
+
+	svg {
+		cursor: pointer;
+  
+		flex-shrink: 0;
+	}
+}
+.tag-box {
+	display: flex;
+	gap: 4px;
+	flex-wrap: wrap;
+   
+}
+.clear{
+    flex-shrink: 0;
+}
+
+//========================================================================================================================================================
+
+
+::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+    color: transparent;
+}
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+    color: black !important;
+}

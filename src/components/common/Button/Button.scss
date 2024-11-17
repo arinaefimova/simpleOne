@@ -1,0 +1,26 @@
+.button{
+    font-weight: 600;
+    position: relative;
+    z-index: 3;
+    padding: 6px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid var(--border-color);
+    @media (any-hover: hover){
+        &:hover{
+            background-color: rgba(223, 219, 219, 0.529);
+        }
+    }
+    &_primary{
+        border: none;
+        background-color: #0078CF;
+        color: #fff;
+        @media (any-hover: hover){
+            &:hover{
+                background-color: #1468a5;
+            }
+        }
+    }
+}

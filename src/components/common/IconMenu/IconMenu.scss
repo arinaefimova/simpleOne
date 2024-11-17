@@ -1,0 +1,33 @@
+.icon-menu {
+	
+
+    @media (min-width:768px){
+        position: fixed;
+        top: 48px;
+        left: 0;
+        z-index: 2;
+        min-height: calc(100vh - 48px);
+        width: 56px;
+        height: 100%;
+        border-right: 1px solid var(--border-color);
+
+        padding: 16px;
+        background-color: var(--bg-color);
+        border-right: 1px solid var(--border-color);
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 34px 0;
+        }
+    }
+
+	@media (max-width: 768px) {
+		li {
+			&:last-child {
+				display: none;
+			}
+		}
+	}
+}

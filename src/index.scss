@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:regular,500,600');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:regular,600');
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+   
+    --main-color:#2E3238;
+    --border-color: #D5D8DD;
+    --text-light:#ABB1BA;
+    --bg-color:#fff;
+    --menu-color:#FCFCFD;
+    background: var(--bg-color);
+    color: var(--main-color);
+    &.lock{
+        overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+    }
+    &.dark {
+        --main-color:#fff;
+        --bg-color:#2E3238;
+        --menu-color:#2E3238;
+
+    }
+   
+}
+
+.dots{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.menu {
+    @media (max-width:768px){
+         display: none !important;  
+    }
+	
+	
+}
+.bordered{
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 6px;
+    display: flex;
+    height: 32px;
+    width: 32px;
+    align-items: center;
+    justify-content: center;
+    @media (any-hover: hover){
+        &:hover{
+            svg{
+                transform: scale(1.1);
+            }
+        }
+    }
+    &_md{
+        padding: 3px;
+    }
+}
